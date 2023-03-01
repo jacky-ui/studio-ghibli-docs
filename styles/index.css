@@ -4,4 +4,9 @@
 
 body {
   margin: 0;
+}
+
+.nav__image {
+  width: 100vw;
+  height: 22rem;
 }/*# sourceMappingURL=index.css.map */
