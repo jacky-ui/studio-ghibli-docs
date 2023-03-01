@@ -26,3 +26,23 @@ body {
         }
     }
 }
+
+// Styling for body content
+.content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+
+    &__nav {
+        width: 40%;
+        height: 100vh;
+    }
+    &__body {
+        width: 60%;
+
+        &--title {
+            @include page-header;
+            text-align: center;
+        }
+    }
+}
