@@ -1,2 +1,22 @@
 $White: #FFFFFF;
 $Black: #13182C;
+
+// Mixins for each breakpoint
+
+@mixin mobile {
+    @media screen and (max-width: $mobile-breakpoint) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 1279px) and (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
