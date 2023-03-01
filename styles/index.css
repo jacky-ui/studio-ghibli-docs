@@ -1,7 +1,29 @@
+@font-face {
+  font-family: "Titillium";
+  src: url("../../assets/fonts/TitilliumWeb-Regular.woff") format("woff"), url("../../assets/fonts/TitilliumWeb-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Titillium";
+  src: url("../../assets/fonts/TitilliumWeb-SemiBold.woff") format("woff"), url("../../assets/fonts/TitilliumWeb-SemiBold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
 *, ::after, ::before {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+}
+
+.nav__image {
+  width: 100vw;
+  height: 22rem;
+}
+@media screen and (max-width: 767px) {
+  .nav__image {
+    height: 17rem;
+  }
 }/*# sourceMappingURL=index.css.map */

@@ -1,7 +1,28 @@
+@use '../styles/partials/mixins' as *;
+@use '../styles/partials/variables' as *;
+
 *, ::after, ::before {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
+}
+
+// Navigation Styling
+.nav {
+    // background-image: url(../assets/images/Studio_Ghibli_logo.svg.png);
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // width: 100vw;
+    // height: 20rem;
+
+    &__image {
+        width: 100vw;
+        height: 22rem;
+
+        @include mobile {
+            height: 17rem;
+        }
+    }
 }
