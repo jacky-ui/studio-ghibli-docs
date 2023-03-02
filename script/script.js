@@ -84,3 +84,23 @@ oneFilm.addEventListener("click", () => {
             });
     });
 });
+
+// Event Listener for filmPoster li tag
+filmPoster.addEventListener("click", () => {
+    bodyContent.innerHTML = " ";
+    createTag("h3", "GET Specific Studio Ghibli Film Poster", "content__contents--title");
+    createTag("h4", "GET  /films/{film_id}/poster", "content__contents--subtitle");
+    createTag("p", "This endpoint provides data on a specific Studio Ghibli film", "content__contents--text");
+    createButton("button", "Try it out!", "id", "filmPosterCall", "content__contents--button");
+
+    const filmPosterCall = document.querySelector("#filmPosterCall");
+    // GET Specific Film Axios call
+    filmPosterCall.addEventListener("click", () => {
+        axios
+            .get(`${URL}/films/a8e84fd7-92d4-4cf3-9786-e24c0bb1902c/poster`)
+            .then((response) => {
+                console.log(response.data);
+                // createTag("p", data, "content__contents--text")
+            });
+    });
+});

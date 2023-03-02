@@ -149,6 +149,7 @@ body {
 }
 
 .hide--content {
+    display: block;
     @include mobile {
         display: none;
     }
