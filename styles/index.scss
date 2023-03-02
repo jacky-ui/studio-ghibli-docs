@@ -34,10 +34,20 @@ body {
     margin-top: 3rem;
     align-items: baseline;
 
+    @include mobile {
+        display: unset;
+        flex-direction: unset;
+        align-items: unset;
+    }
+
     &__nav {
         width: 40%;
         height: 100vh;
         margin-left:2rem;
+
+        @include mobile {
+            display: none;
+        }
 
         &--title {
             @include subheader;
@@ -45,6 +55,10 @@ body {
     }
     &__body {
         width: 60%;
+
+        @include mobile {
+            width: 100%;
+        }
 
         &--title {
             @include page-header;

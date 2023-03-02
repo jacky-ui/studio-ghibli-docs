@@ -34,10 +34,22 @@ body {
   margin-top: 3rem;
   align-items: baseline;
 }
+@media screen and (max-width: 767px) {
+  .content {
+    display: unset;
+    flex-direction: unset;
+    align-items: unset;
+  }
+}
 .content__nav {
   width: 40%;
   height: 100vh;
   margin-left: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .content__nav {
+    display: none;
+  }
 }
 .content__nav--title {
   font-size: 1.5rem;
@@ -47,6 +59,11 @@ body {
 }
 .content__body {
   width: 60%;
+}
+@media screen and (max-width: 767px) {
+  .content__body {
+    width: 100%;
+  }
 }
 .content__body--title {
   font-size: 2rem;
