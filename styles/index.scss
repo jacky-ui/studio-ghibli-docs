@@ -99,6 +99,9 @@ body {
                 @include body-medium;
             }
         }
+        &--subtitle {
+            @include page-header;
+        }
     }
     &__body {
         width: 60%;

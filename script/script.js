@@ -19,6 +19,7 @@ showMenu.addEventListener("click", () => {
     }
 });
 
+// Function to create html tag with text and class
 function createTag(tag, text, className) {
     let element = document.createElement(tag);
     element.classList.add(className)
@@ -30,5 +31,13 @@ function createTag(tag, text, className) {
 introduction.addEventListener("click", () => {
     bodyContent.innerHTML = " ";
     createTag("h3", "Welcome to my Studio Ghibli API!", "content__contents--title");
-    createTag("p", "This API does not require any API key. However, there is a limit to how many GET requests you can do. 10 GET requests/15mins.", "content__contents--text")
+    createTag("p", "Please use this URL when making a call 'https://long-tan-monkey-tutu.cyclic.app/'. Refer to side navigation for more endpoints. This API does not require any API key. However, there is a limit to how many GET requests you can do. 10 GET requests/15mins. Currently deployed with Cyclic. More to come!!", "content__contents--text")
+});
+
+// Event Listener for getFilms li tag
+allFilms.addEventListener("click", () => {
+    bodyContent.innerHTML = " ";
+    createTag("h3", "GET All Studio Ghibli Films", "content__contents--title");
+    createTag("h4", "GET  /films", "content__contents--subtitle");
+    createTag("p", "This endpoint provides data on all Studio Ghibli films", "content__contents--text")
 });
