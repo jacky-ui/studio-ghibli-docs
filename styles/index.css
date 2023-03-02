@@ -128,6 +128,22 @@ body {
   line-height: 2.5rem;
   font-family: "Titillium";
 }
+.content__contents--button {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  font-family: "Titillium";
+  color: #FFFFFF;
+  background-color: #13182C;
+  border: none;
+  border-radius: 2px;
+}
+.content__contents--button:hover {
+  border: 2px solid #13182C;
+  color: #13182C;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
 .content__body {
   width: 60%;
 }
