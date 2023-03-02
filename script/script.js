@@ -54,7 +54,7 @@ allFilms.addEventListener("click", () => {
     createButton("button", "Try it out!", "id", "allFilmsCall", "content__contents--button");
 
     const allFilmsCall = document.querySelector("#allFilmsCall");
-
+    // GET All Films Axios call
     allFilmsCall.addEventListener("click", () => {
         axios
             .get(`${URL}films`)
@@ -65,4 +65,22 @@ allFilms.addEventListener("click", () => {
     });
 });
 
-// GET All Films Axios call
+// Event Listener for oneFilm li tag
+oneFilm.addEventListener("click", () => {
+    bodyContent.innerHTML = " ";
+    createTag("h3", "GET Specific Studio Ghibli Films", "content__contents--title");
+    createTag("h4", "GET  /films/{film_id}", "content__contents--subtitle");
+    createTag("p", "This endpoint provides data on a specific Studio Ghibli film", "content__contents--text");
+    createButton("button", "Try it out!", "id", "oneFilmCall", "content__contents--button");
+
+    const oneFilmCall = document.querySelector("#oneFilmCall");
+    // GET Specific Film Axios call
+    oneFilmCall.addEventListener("click", () => {
+        axios
+            .get(`${URL}/films/a8e84fd7-92d4-4cf3-9786-e24c0bb1902c`)
+            .then((response) => {
+                let data = JSON.stringify(response.data);
+                createTag("p", data, "content__contents--text")
+            });
+    });
+});
