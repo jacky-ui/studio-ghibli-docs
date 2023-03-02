@@ -49,3 +49,17 @@
     line-height: 1.125rem;
     font-family: 'Titillium';
 }
+
+@mixin button-style {
+    color: $White;
+    background-color: $Black;
+    border: none;
+    border-radius: 2px;
+}
+
+@mixin button-hover {
+    border: 2px solid $Black;
+    color: $Black;
+    background-color: $White;
+    cursor: pointer;
+}
