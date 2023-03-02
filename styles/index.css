@@ -92,6 +92,7 @@ body {
   border: 2px solid #13182C;
   color: #13182C;
   background-color: #FFFFFF;
+  cursor: pointer;
 }
 .content__body {
   width: 60%;
