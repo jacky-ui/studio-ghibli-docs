@@ -1,3 +1,5 @@
+const URL = "https://long-tan-monkey-tutu.cyclic.app/"
+
 const showMenu = document.querySelector("#showMenu")
 let container = document.querySelector(".container");
 let bodyContent = document.querySelector(".content__contents");
@@ -49,4 +51,16 @@ allFilms.addEventListener("click", () => {
     createTag("h4", "GET  /films", "content__contents--subtitle");
     createTag("p", "This endpoint provides data on all Studio Ghibli films", "content__contents--text");
     createButton("button", "Try it out!", "id", "allFilmsCall", "content__contents--button");
+
+    const allFilmsCall = document.querySelector("#allFilmsCall");
+
+    allFilmsCall.addEventListener("click", () => {
+        axios
+            .get(`${URL}films`)
+            .then((response) => {
+                console.log(response);
+            });
+    });
 });
+
+// GET All Films Axios call
