@@ -18,3 +18,8 @@ showMenu.addEventListener("click", () => {
         container.classList.add("hide--content");
     }
 });
+
+introduction.addEventListener("click", () => {
+    bodyContent.innerHTML = " ";
+    
+})
