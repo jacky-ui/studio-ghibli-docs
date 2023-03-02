@@ -27,9 +27,10 @@ function createTag(tag, text, className) {
     bodyContent.appendChild(element);
 };
 
-function createButton(tag, text, idName, idDescription) {
+function createButton(tag, text, idName, idDescription, className) {
     let button = document.createElement(tag);
     button.setAttribute(idName, idDescription);
+    button.classList.add(className)
     button.innerText = text;
     bodyContent.appendChild(button);
 }
@@ -47,5 +48,5 @@ allFilms.addEventListener("click", () => {
     createTag("h3", "GET All Studio Ghibli Films", "content__contents--title");
     createTag("h4", "GET  /films", "content__contents--subtitle");
     createTag("p", "This endpoint provides data on all Studio Ghibli films", "content__contents--text");
-    createTag("button", "Try it out!", )
+    createButton("button", "Try it out!", "id", "allFilmsCall", "content__contents--button");
 });
