@@ -19,7 +19,16 @@ showMenu.addEventListener("click", () => {
     }
 });
 
+function createTag(tag, text, className) {
+    let element = document.createElement(tag);
+    element.classList.add(className)
+    element.innerText = text;
+    bodyContent.appendChild(element);
+};
+
+// Event Listener for Introduction li tag
 introduction.addEventListener("click", () => {
     bodyContent.innerHTML = " ";
-    
-})
+    createTag("h3", "Welcome to my Studio Ghibli API!", "content__contents--title");
+    createTag("p", "This API does not require any API key. However, there is a limit to how many GET requests you can do. 10 GET requests/15mins.", "content__contents--text")
+});
