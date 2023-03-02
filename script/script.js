@@ -27,6 +27,13 @@ function createTag(tag, text, className) {
     bodyContent.appendChild(element);
 };
 
+function createButton(tag, text, idName, idDescription) {
+    let button = document.createElement(tag);
+    button.setAttribute(idName, idDescription);
+    button.innerText = text;
+    bodyContent.appendChild(button);
+}
+
 // Event Listener for Introduction li tag
 introduction.addEventListener("click", () => {
     bodyContent.innerHTML = " ";
@@ -39,5 +46,6 @@ allFilms.addEventListener("click", () => {
     bodyContent.innerHTML = " ";
     createTag("h3", "GET All Studio Ghibli Films", "content__contents--title");
     createTag("h4", "GET  /films", "content__contents--subtitle");
-    createTag("p", "This endpoint provides data on all Studio Ghibli films", "content__contents--text")
+    createTag("p", "This endpoint provides data on all Studio Ghibli films", "content__contents--text");
+    createTag("button", "Try it out!", )
 });
