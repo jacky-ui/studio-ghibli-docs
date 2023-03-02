@@ -55,6 +55,14 @@ body {
   font-family: "Titillium";
   text-align: center;
 }
+@media screen and (max-width: 767px) {
+  .content__body--title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2rem;
+    font-family: "Titillium";
+  }
+}
 .content__list {
   font-size: 1rem;
   font-weight: bold;
