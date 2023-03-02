@@ -85,7 +85,7 @@ oneFilm.addEventListener("click", () => {
     // GET Specific Film Axios call
     oneFilmCall.addEventListener("click", () => {
         axios
-            .get(`${URL}/films/a8e84fd7-92d4-4cf3-9786-e24c0bb1902c`)
+            .get(`${URL}films/a8e84fd7-92d4-4cf3-9786-e24c0bb1902c`)
             .then((response) => {
                 let data = JSON.stringify(response.data);
                 createTag("p", data, "content__contents--text")
@@ -105,9 +105,10 @@ filmPoster.addEventListener("click", () => {
     // GET Specific Film Axios call
     filmPosterCall.addEventListener("click", () => {
         axios
-            .get(`${URL}/films/a8e84fd7-92d4-4cf3-9786-e24c0bb1902c/poster`)
+            .get(`${URL}films/9392a1ac-c076-44ab-9ade-307cbc508829/poster`)
             .then((response) => {
-                createImage("img", "src", response.data, "content__contents--image")
+                console.log(response.config.url);
+                createImage("img", "src", response.config.url, "content__contents--image")
             });
     });
 });
@@ -124,7 +125,7 @@ filmeGenre.addEventListener("click", () => {
     // GET Specific Film Axios call
     filmeGenreCall.addEventListener("click", () => {
         axios
-            .get(`${URL}/films/a8e84fd7-92d4-4cf3-9786-e24c0bb1902c/genre`)
+            .get(`${URL}films/a8e84fd7-92d4-4cf3-9786-e24c0bb1902c/genre`)
             .then((response) => {
                 let data = JSON.stringify(response.data);
                 createTag("p", data, "content__contents--text")
@@ -144,7 +145,7 @@ filmSummary.addEventListener("click", () => {
     // GET Specific Film Axios call
     filmSummaryCall.addEventListener("click", () => {
         axios
-            .get(`${URL}/films/a8e84fd7-92d4-4cf3-9786-e24c0bb1902c/synopsis`)
+            .get(`${URL}films/a8e84fd7-92d4-4cf3-9786-e24c0bb1902c/synopsis`)
             .then((response) => {
                 let data = JSON.stringify(response.data);
                 createTag("p", data, "content__contents--text")
