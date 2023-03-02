@@ -43,7 +43,6 @@ body {
 }
 .content__nav {
   width: 40%;
-  height: 100vh;
   margin-left: 2rem;
 }
 @media screen and (max-width: 767px) {

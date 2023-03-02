@@ -39,10 +39,9 @@ body {
         flex-direction: column-reverse;
         align-items: unset;
     }
-
+    // Side Navigation Styling
     &__nav {
         width: 40%;
-        height: 100vh;
         margin-left:2rem;
 
         @include mobile {
