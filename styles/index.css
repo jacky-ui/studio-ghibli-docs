@@ -134,6 +134,22 @@ body {
   cursor: pointer;
   margin: 5% 0%;
 }
+@media screen and (min-width: 1280px) {
+  .content__list > li {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .content__list > li {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.content__list > li:hover {
+  border-top: 1px solid #13182C;
+  border-bottom: 1px solid #13182C;
+}
 
 .hide--content {
   display: none;
