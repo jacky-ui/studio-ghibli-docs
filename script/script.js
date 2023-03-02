@@ -29,13 +29,14 @@ function createTag(tag, text, className) {
     bodyContent.appendChild(element);
 };
 
+// Function to create button along with id, text and etc
 function createButton(tag, text, idName, idDescription, className) {
     let button = document.createElement(tag);
     button.setAttribute(idName, idDescription);
     button.classList.add(className)
     button.innerText = text;
     bodyContent.appendChild(button);
-}
+};
 
 // Event Listener for Introduction li tag
 introduction.addEventListener("click", () => {
@@ -58,7 +59,8 @@ allFilms.addEventListener("click", () => {
         axios
             .get(`${URL}films`)
             .then((response) => {
-                console.log(response);
+                let data = JSON.stringify(response.data);
+                createTag("p", data, "content__contents--text")
             });
     });
 });
