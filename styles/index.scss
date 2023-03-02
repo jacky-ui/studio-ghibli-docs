@@ -35,7 +35,7 @@ body {
     align-items: baseline;
 
     @include mobile {
-        display: unset;
+        display: revert;
         flex-direction: unset;
         align-items: unset;
     }
