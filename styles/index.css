@@ -144,6 +144,10 @@ body {
   background-color: #FFFFFF;
   cursor: pointer;
 }
+.content__contents--image {
+  width: 5rem;
+  height: 5rem;
+}
 .content__body {
   width: 60%;
 }

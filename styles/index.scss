@@ -104,6 +104,10 @@ body {
                 @include button-hover;
             }
         }
+        &--image {
+            width: 5rem;
+            height: 5rem;
+        }
     }
     &__body {
         width: 60%;
