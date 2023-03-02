@@ -26,4 +26,131 @@ body {
   .nav__image {
     height: 17rem;
   }
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3rem;
+  align-items: baseline;
+}
+@media screen and (max-width: 767px) {
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: unset;
+  }
+}
+.content__nav {
+  width: 40%;
+  margin-left: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .content__nav {
+    width: 100%;
+    height: auto;
+    margin-left: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.content__nav--title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2rem;
+  font-family: "Titillium";
+}
+@media screen and (max-width: 767px) {
+  .content__nav--title {
+    margin-bottom: 0%;
+  }
+}
+.content__nav--button {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  font-family: "Titillium";
+  color: #FFFFFF;
+  background-color: #13182C;
+  border: none;
+  border-radius: 2px;
+  width: 20rem;
+  height: 4rem;
+}
+@media screen and (min-width: 1280px) {
+  .content__nav--button {
+    display: none;
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .content__nav--button {
+    display: none;
+  }
+}
+.content__nav--button:hover {
+  border: 2px solid #13182C;
+  color: #13182C;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+.content__body {
+  width: 60%;
+}
+@media screen and (max-width: 767px) {
+  .content__body {
+    width: 100%;
+  }
+}
+.content__body--title {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  font-family: "Titillium";
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .content__body--title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2rem;
+    font-family: "Titillium";
+  }
+}
+.content__list {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  font-family: "Titillium";
+  list-style: none;
+  padding: 0;
+}
+@media screen and (max-width: 767px) {
+  .content__list {
+    margin-top: 0;
+  }
+}
+.content__list > li {
+  cursor: pointer;
+  margin: 5% 0%;
+}
+@media screen and (min-width: 1280px) {
+  .content__list > li {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .content__list > li {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.content__list > li:hover {
+  border-top: 1px solid #13182C;
+  border-bottom: 1px solid #13182C;
+}
+
+.hide--content {
+  display: none;
 }/*# sourceMappingURL=index.css.map */

@@ -26,3 +26,107 @@ body {
         }
     }
 }
+
+// Styling for body content
+.content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    align-items: baseline;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: unset;
+    }
+    // Side Navigation Styling
+    &__nav {
+        width: 40%;
+        margin-left:2rem;
+
+        @include mobile {
+            width: 100%;
+            height: auto;
+            margin-left: 0%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &--title {
+            @include subheader;
+
+            @include mobile {
+                margin-bottom: 0%;
+            }
+        }
+
+        &--button {
+            @include desktop {
+                display: none;
+            }
+            @include tablet {
+                display: none;
+            }
+            @include page-header;
+            color: $White;
+            background-color: $Black;
+            border: none;
+            border-radius: 2px;
+            width: 20rem;
+            height: 4rem;
+
+            &:hover {
+                border: 2px solid $Black;
+                color: $Black;
+                background-color: $White;
+                cursor: pointer;
+            }
+        }
+    }
+    &__body {
+        width: 60%;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &--title {
+            @include page-header;
+            text-align: center;
+
+            @include mobile {
+                @include subheader;
+            }
+        }
+    }
+    &__list {
+        @include smallheader;
+        list-style: none;
+        padding: 0;
+
+        @include mobile {
+            margin-top: 0;
+        }
+
+        & > li {
+            @include desktop {
+                width: fit-content;
+            }
+            @include tablet {
+                width: fit-content;
+            }
+            cursor: pointer;
+            margin: 5% 0%;
+
+            &:hover {
+                border-top: 1px solid $Black;
+                border-bottom: 1px solid $Black;
+            }
+        }
+    }
+}
+
+.hide--content {
+    display: none;
+}
