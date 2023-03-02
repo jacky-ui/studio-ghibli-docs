@@ -94,6 +94,34 @@ body {
   background-color: #FFFFFF;
   cursor: pointer;
 }
+.content__contents--title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2rem;
+  font-family: "Titillium";
+}
+@media screen and (max-width: 767px) {
+  .content__contents--title {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    font-family: "Titillium";
+  }
+}
+.content__contents--text {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75rem;
+  font-family: "Titillium";
+}
+@media screen and (max-width: 767px) {
+  .content__contents--text {
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.375rem;
+    font-family: "Titillium";
+  }
+}
 .content__body {
   width: 60%;
 }
@@ -151,6 +179,8 @@ body {
   border-bottom: 1px solid #13182C;
 }
 
-.hide--content {
-  display: none;
+@media screen and (max-width: 767px) {
+  .hide--content {
+    display: none;
+  }
 }/*# sourceMappingURL=index.css.map */

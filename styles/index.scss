@@ -84,6 +84,22 @@ body {
             }
         }
     }
+    &__contents {
+        &--title {
+            @include subheader;
+
+            @include mobile {
+                @include smallheader;
+            }
+        }
+        &--text {
+            @include body-large-desktop;
+
+            @include mobile {
+                @include body-medium;
+            }
+        }
+    }
     &__body {
         width: 60%;
 
@@ -128,5 +144,7 @@ body {
 }
 
 .hide--content {
-    display: none;
+    @include mobile {
+        display: none;
+    }
 }
