@@ -68,8 +68,19 @@ body {
             @include tablet {
                 display: none;
             }
+            @include page-header;
+            color: $White;
+            background-color: $Black;
+            border: none;
+            border-radius: 2px;
             width: 20rem;
             height: 4rem;
+
+            &:hover {
+                border: 2px solid $Black;
+                color: $Black;
+                background-color: $White;
+            }
         }
     }
     &__body {
