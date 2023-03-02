@@ -38,6 +38,15 @@ function createButton(tag, text, idName, idDescription, className) {
     bodyContent.appendChild(button);
 };
 
+// Function to create image
+function createImage(tag, attributeName, attributeUrl, className) {
+    let button = document.createElement(tag);
+    button.setAttribute(attributeName, attributeUrl);
+    button.classList.add(className)
+    button.innerText = text;
+    bodyContent.appendChild(button);
+}
+
 // Event Listener for Introduction li tag
 introduction.addEventListener("click", () => {
     bodyContent.innerHTML = " ";
@@ -100,7 +109,7 @@ filmPoster.addEventListener("click", () => {
             .get(`${URL}/films/a8e84fd7-92d4-4cf3-9786-e24c0bb1902c/poster`)
             .then((response) => {
                 console.log(response.data);
-                // createTag("p", data, "content__contents--text")
+                createTag("img", data, "content__contents--text")
             });
     });
 });
