@@ -111,3 +111,43 @@ filmPoster.addEventListener("click", () => {
             });
     });
 });
+
+// Event Listener for filmGenre li tag
+filmeGenre.addEventListener("click", () => {
+    bodyContent.innerHTML = " ";
+    createTag("h3", "GET Specific Studio Ghibli Film Genre", "content__contents--title");
+    createTag("h4", "GET  /films/{film_id}/genre", "content__contents--subtitle");
+    createTag("p", "This endpoint provides data on a specific Studio Ghibli genre", "content__contents--text");
+    createButton("button", "Try it out!", "id", "filmeGenreCall", "content__contents--button");
+
+    const filmeGenreCall = document.querySelector("#filmeGenreCall");
+    // GET Specific Film Axios call
+    filmeGenreCall.addEventListener("click", () => {
+        axios
+            .get(`${URL}/films/a8e84fd7-92d4-4cf3-9786-e24c0bb1902c/genre`)
+            .then((response) => {
+                let data = JSON.stringify(response.data);
+                createTag("p", data, "content__contents--text")
+            });
+    });
+});
+
+// Event Listener for filmSummary li tag
+filmSummary.addEventListener("click", () => {
+    bodyContent.innerHTML = " ";
+    createTag("h3", "GET Specific Studio Ghibli Film Synopsis", "content__contents--title");
+    createTag("h4", "GET  /films/{film_id}/synopsis", "content__contents--subtitle");
+    createTag("p", "This endpoint provides data on a specific Studio Ghibli synopsis", "content__contents--text");
+    createButton("button", "Try it out!", "id", "filmSummaryCall", "content__contents--button");
+
+    const filmSummaryCall = document.querySelector("#filmSummaryCall");
+    // GET Specific Film Axios call
+    filmSummaryCall.addEventListener("click", () => {
+        axios
+            .get(`${URL}/films/a8e84fd7-92d4-4cf3-9786-e24c0bb1902c/synopsis`)
+            .then((response) => {
+                let data = JSON.stringify(response.data);
+                createTag("p", data, "content__contents--text")
+            });
+    });
+});
