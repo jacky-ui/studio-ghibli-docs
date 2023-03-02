@@ -5,8 +5,8 @@ console.log(container.classList.value);
 showMenu.addEventListener("click", () => {
     
     if (container.classList.value === "container hide--content") {
-        console.log("hello world");
+        container.classList.remove("hide--content");
     } else {
-        console.log("nope")
+        container.classList.add("hide--content");
     }
 });
