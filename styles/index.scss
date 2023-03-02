@@ -105,8 +105,15 @@ body {
             }
         }
         &--image {
-            width: 5rem;
-            height: 5rem;
+            display: block;
+            margin: 5% auto;
+            width: 20rem;
+            height: 30rem;
+
+            @include mobile {
+                width: 13rem;
+            height: 20rem;
+            }
         }
     }
     &__body {
