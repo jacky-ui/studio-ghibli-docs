@@ -31,11 +31,19 @@ body {
 .content {
   display: flex;
   flex-direction: row;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  align-items: baseline;
 }
 .content__nav {
   width: 40%;
   height: 100vh;
+  margin-left: 2rem;
+}
+.content__nav--title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2rem;
+  font-family: "Titillium";
 }
 .content__body {
   width: 60%;
@@ -46,4 +54,16 @@ body {
   line-height: 2.5rem;
   font-family: "Titillium";
   text-align: center;
+}
+.content__list {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  font-family: "Titillium";
+  list-style: none;
+  padding: 0;
+}
+.content__list > li {
+  cursor: pointer;
+  margin: 5% 0%;
 }/*# sourceMappingURL=index.css.map */
