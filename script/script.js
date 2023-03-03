@@ -3,6 +3,8 @@ const URL = "https://long-tan-monkey-tutu.cyclic.app/"
 const showMenu = document.querySelector("#showMenu")
 let container = document.querySelector(".container");
 let bodyContent = document.querySelector(".content__contents");
+let liTag = document.querySelectorAll("li");
+console.log(liTag);
 
 // Declare and grab id's of li tags
 let introduction = document.querySelector("#introduction");
@@ -150,5 +152,11 @@ filmSummary.addEventListener("click", () => {
                 let data = JSON.stringify(response.data);
                 createTag("p", data, "content__contents--text")
             });
+    });
+});
+
+liTag.forEach((li) => {
+    li.addEventListener("click", () => {
+        console.log("you have clicked me");
     });
 });
