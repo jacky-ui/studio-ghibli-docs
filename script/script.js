@@ -157,6 +157,12 @@ filmSummary.addEventListener("click", () => {
 
 const liClasses = ["howl", "laputa", "noface", "porco", "princess", "totoro"];
 
+const generateRandomClass = () => {
+    const random = Math.floor(Math.random() * liClasses.length)
+    return liClasses[random];
+};
+console.log(generateRandomClass());
+
 liTag.forEach((li) => {
     li.addEventListener("click", () => {
         console.log("you have clicked me");
