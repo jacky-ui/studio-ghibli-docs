@@ -155,16 +155,21 @@ filmSummary.addEventListener("click", () => {
     });
 });
 
+// Section of code is for generating random class name from array and adding to li tag being clicked
 const liClasses = ["howl", "laputa", "noface", "porco", "princess", "totoro"];
 
 const generateRandomClass = () => {
     const random = Math.floor(Math.random() * liClasses.length)
     return liClasses[random];
 };
-console.log(generateRandomClass());
 
+// Adding eventListener to each li tag, will remove all class names before assiging to one clicked on
 liTag.forEach((li) => {
     li.addEventListener("click", () => {
-        console.log("you have clicked me");
+        liTag.forEach((li) => {
+            li.className = " ";
+        });
+        li.classList.add(generateRandomClass());
+        console.log(li);
     });
 });
