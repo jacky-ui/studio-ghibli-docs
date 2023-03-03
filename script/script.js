@@ -155,6 +155,8 @@ filmSummary.addEventListener("click", () => {
     });
 });
 
+const liClasses = ["howl", "laputa", "noface", "porco", "princess", "totoro"];
+
 liTag.forEach((li) => {
     li.addEventListener("click", () => {
         console.log("you have clicked me");
