@@ -156,7 +156,7 @@ filmSummary.addEventListener("click", () => {
 });
 
 // Section of code is for generating random class name from array and adding to li tag being clicked
-const liClasses = ["howl", "laputa", "noface", "porco", "princess", "totoro"];
+const liClasses = ["howl", "laputa", "noface", "porco", "princess", "totoro", "cat", "ponyo", "nausicaa"];
 
 const generateRandomClass = () => {
     const random = Math.floor(Math.random() * liClasses.length)
