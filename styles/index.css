@@ -185,7 +185,7 @@ body {
   line-height: 1.5rem;
   font-family: "Titillium";
   list-style: none;
-  padding: 0;
+  padding: 0 0 0 5%;
 }
 @media screen and (max-width: 767px) {
   .content__list {
@@ -220,4 +220,49 @@ body {
   .hide--content {
     display: none;
   }
+}
+
+.howl {
+  list-style-image: url(../assets/images/howl.png);
+  padding-left: 2rem;
+}
+
+.laputa {
+  list-style-image: url(../assets/images/laputa.png);
+  padding-left: 2rem;
+}
+
+.noface {
+  list-style-image: url(../assets/images/noface.png);
+  padding-left: 2rem;
+}
+
+.porco {
+  list-style-image: url(../assets/images/porco.png);
+  padding-left: 2rem;
+}
+
+.princess {
+  list-style-image: url(../assets/images/princess.png);
+  padding-left: 2rem;
+}
+
+.totoro {
+  list-style-image: url(../assets/images/totoro.png);
+  padding-left: 2rem;
+}
+
+.cat {
+  list-style-image: url(../assets/images/cat.png);
+  padding-left: 2rem;
+}
+
+.nausicaa {
+  list-style-image: url(../assets/images/nausicaa.png);
+  padding-left: 2rem;
+}
+
+.ponyo {
+  list-style-image: url(../assets/images/ponyo.png);
+  padding-left: 2rem;
 }/*# sourceMappingURL=index.css.map */

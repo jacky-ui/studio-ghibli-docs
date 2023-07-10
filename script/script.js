@@ -3,6 +3,8 @@ const URL = "https://long-tan-monkey-tutu.cyclic.app/"
 const showMenu = document.querySelector("#showMenu")
 let container = document.querySelector(".container");
 let bodyContent = document.querySelector(".content__contents");
+let liTag = document.querySelectorAll("li");
+console.log(liTag);
 
 // Declare and grab id's of li tags
 let introduction = document.querySelector("#introduction");
@@ -150,5 +152,24 @@ filmSummary.addEventListener("click", () => {
                 let data = JSON.stringify(response.data);
                 createTag("p", data, "content__contents--text")
             });
+    });
+});
+
+// Section of code is for generating random class name from array and adding to li tag being clicked
+const liClasses = ["howl", "laputa", "noface", "porco", "princess", "totoro", "cat", "ponyo", "nausicaa"];
+
+const generateRandomClass = () => {
+    const random = Math.floor(Math.random() * liClasses.length)
+    return liClasses[random];
+};
+
+// Adding eventListener to each li tag, will remove all class names before assiging to one clicked on
+liTag.forEach((li) => {
+    li.addEventListener("click", () => {
+        liTag.forEach((li) => {
+            li.className = " ";
+        });
+        li.classList.add(generateRandomClass());
+        console.log(li);
     });
 });
