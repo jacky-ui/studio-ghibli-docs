@@ -16,6 +16,7 @@
 
 body {
   margin: 0;
+  cursor: url(../assets/images/nofacenotactive.png), auto;
 }
 
 .nav {
@@ -98,7 +99,7 @@ body {
   border: 2px solid #13182C;
   color: #13182C;
   background-color: #FFFFFF;
-  cursor: pointer;
+  cursor: url(../../assets/images/nofaceactive.png), pointer;
 }
 .content__contents--title {
   font-size: 1.5rem;
@@ -148,7 +149,7 @@ body {
   border: 2px solid #13182C;
   color: #13182C;
   background-color: #FFFFFF;
-  cursor: pointer;
+  cursor: url(../../assets/images/nofaceactive.png), pointer;
 }
 .content__contents--image {
   display: block;
