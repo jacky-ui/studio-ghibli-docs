@@ -35,6 +35,7 @@ body {
     flex-direction: row;
     margin-top: 3rem;
     align-items: baseline;
+    padding: 0rem 3rem;
 
     @include mobile {
         display: flex;
@@ -139,13 +140,14 @@ body {
     &__list {
         @include smallheader;
         list-style: none;
-        padding: 0 0 0 5%;
+        padding: 0%;
 
         @include mobile {
             margin-top: 0;
         }
 
         & > li {
+            padding: 0%;
             @include desktop {
                 width: fit-content;
             }
