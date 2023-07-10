@@ -16,13 +16,15 @@ body {
     // background-position: center;
     // width: 100vw;
     // height: 20rem;
+    text-align: center;
 
     &__image {
-        width: 100vw;
+        width: 45rem;
         height: 22rem;
 
         @include mobile {
-            height: 17rem;
+            height: 100%;
+            width: 100%;
         }
     }
 }
