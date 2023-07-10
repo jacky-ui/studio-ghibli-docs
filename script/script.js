@@ -4,7 +4,6 @@ const showMenu = document.querySelector("#showMenu")
 let container = document.querySelector(".container");
 let bodyContent = document.querySelector(".content__contents");
 let liTag = document.querySelectorAll("li");
-console.log(liTag);
 
 // Declare and grab id's of li tags
 let introduction = document.querySelector("#introduction");
@@ -170,6 +169,5 @@ liTag.forEach((li) => {
             li.className = " ";
         });
         li.classList.add(generateRandomClass());
-        console.log(li);
     });
 });
