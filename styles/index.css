@@ -136,6 +136,12 @@ body {
   line-height: 2.5rem;
   font-family: "Titillium";
 }
+@media screen and (max-width: 767px) {
+  .content__contents--subtitle {
+    font-size: 5vw;
+    margin: 3% 0%;
+  }
+}
 .content__contents--button {
   font-size: 1rem;
   font-weight: bold;

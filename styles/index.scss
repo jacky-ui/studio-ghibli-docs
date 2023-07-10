@@ -102,6 +102,11 @@ body {
         }
         &--subtitle {
             @include page-header;
+
+            @include mobile {
+                font-size: 5vw;
+                margin: 3% 0%
+            }
         }
         &--button {
             @include smallheader;
