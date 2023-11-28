@@ -45,7 +45,7 @@ function createImage(tag, attributeName, attributeUrl, className) {
     image.setAttribute(attributeName, attributeUrl);
     image.classList.add(className)
     bodyContent.appendChild(image);
-}
+};
 
 // Event Listener for Introduction li tag
 introduction.addEventListener("click", () => {
@@ -171,3 +171,4 @@ liTag.forEach((li) => {
         li.classList.add(generateRandomClass());
     });
 });
+
